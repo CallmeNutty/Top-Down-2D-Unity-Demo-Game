@@ -20,8 +20,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012860925508}
   - 212: {fileID: 212000011349359640}
-  - 50: {fileID: 50000012417015090}
-  - 58: {fileID: 58000013439785034}
+  - 50: {fileID: 50000011617686526}
+  - 58: {fileID: 58000013494940664}
   m_Layer: 0
   m_Name: Civillian
   m_TagString: Civillian
@@ -36,13 +36,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011882562578}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.718, y: -2.644, z: 0}
+  m_LocalPosition: {x: -2.2312145, y: 1.3369225, z: 0}
   m_LocalScale: {x: 5.2719326, y: 5.2719326, z: 5.2719326}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!50 &50000012417015090
+--- !u!50 &50000011617686526
 Rigidbody2D:
   serializedVersion: 2
   m_ObjectHideFlags: 1
@@ -59,7 +59,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &58000013439785034
+--- !u!58 &58000013494940664
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -72,7 +72,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: -0.03}
   serializedVersion: 2
-  m_Radius: 0.122513466
+  m_Radius: 0.112464234
 --- !u!212 &212000011349359640
 SpriteRenderer:
   m_ObjectHideFlags: 1
