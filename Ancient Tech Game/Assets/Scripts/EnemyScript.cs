@@ -22,6 +22,10 @@ public class EnemyScript : MonoBehaviour
             Destroy(coll.gameObject);
             Destroy(this.gameObject);
         }
+        else
+        {
+            Destroy(coll.gameObject);
+        }
     }
 
     // Use this for initialization
