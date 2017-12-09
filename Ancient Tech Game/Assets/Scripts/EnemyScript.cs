@@ -34,10 +34,13 @@ public class EnemyScript : MonoBehaviour {
             targetingCivillian = true;
             chosenCivillian = civillians[Random.Range(0, civillians.Length)];
         }
+        else if (chosenCivillian == null)
+        {
+            targetingCivillian = false;
+        }
         else if (targetingCivillian == true)
         {
             gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, chosenCivillian.transform.position, runSpeed);
-            Debug.Log("HI");
         }
 
         Debug.Log(chosenCivillian);
