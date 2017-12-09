@@ -142,6 +142,62 @@ Transform:
   m_PrefabParentObject: {fileID: 4000013067471746, guid: ead887b1f33ab9040b90bbd4db4d348b,
     type: 2}
   m_PrefabInternal: {fileID: 1003718509}
+--- !u!1 &430507306
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 430507307}
+  m_Layer: 0
+  m_Name: Bullets
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &430507307
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 430507306}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.7040951, y: -2.03286, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+--- !u!1 &433609134
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 433609135}
+  m_Layer: 1
+  m_Name: FiringPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &433609135
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 433609134}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.08384598, y: -0.08180091, z: 0}
+  m_LocalScale: {x: 0.20450236, y: 0.20450236, z: 0.20450236}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1199608545}
+  m_RootOrder: 0
 --- !u!1 &563980781 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000011882562578, guid: ec5df77f4577cdd4da7ca294b8a3a083,
@@ -220,7 +276,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000012860925508, guid: ec5df77f4577cdd4da7ca294b8a3a083, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.6232947
+      value: 1.79
       objectReference: {fileID: 0}
     - target: {fileID: 4000012860925508, guid: ec5df77f4577cdd4da7ca294b8a3a083, type: 2}
       propertyPath: m_LocalPosition.y
@@ -257,33 +313,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec5df77f4577cdd4da7ca294b8a3a083, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &867474841 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000011882562578, guid: ec5df77f4577cdd4da7ca294b8a3a083,
-    type: 2}
-  m_PrefabInternal: {fileID: 245899805}
 --- !u!4 &867474842 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000012860925508, guid: ec5df77f4577cdd4da7ca294b8a3a083,
     type: 2}
   m_PrefabInternal: {fileID: 245899805}
---- !u!50 &867474845
-Rigidbody2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 867474841}
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1001 &1003718509
 Prefab:
   m_ObjectHideFlags: 0
@@ -423,6 +457,7 @@ GameObject:
   - 212: {fileID: 1199608544}
   - 114: {fileID: 1199608546}
   - 50: {fileID: 1199608547}
+  - 114: {fileID: 1199608548}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -473,7 +508,8 @@ Transform:
   m_LocalPosition: {x: 2.2, y: -3.22, z: 0}
   m_LocalScale: {x: 4.8899193, y: 4.8899193, z: 4.8899193}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
+  m_Children:
+  - {fileID: 433609135}
   m_Father: {fileID: 0}
   m_RootOrder: 3
 --- !u!114 &1199608546
@@ -506,6 +542,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1199608548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1199608543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aa8479ead6617249b6bb51e0e6067cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 1000011266190940, guid: f7965d7e60ff4c74f885519e2265bea2, type: 2}
+  bulletSpawner: {fileID: 433609134}
+  emptyBullet: {fileID: 430507306}
 --- !u!1 &1439368607
 GameObject:
   m_ObjectHideFlags: 0
