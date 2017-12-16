@@ -31,5 +31,20 @@ public class PlayerMovement : MonoBehaviour {
         {
             playerRb2d.AddForce(new Vector2(playerSpeed, 0), ForceMode2D.Impulse);
         }
+
+        Vector3 pos = Camera.main.WorldToScreenPoint(transform.position);
+        Vector3 dir = Input.mousePosition - pos;
+
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+
+        if (angle > 90 || angle < -90)
+        {
+            this.gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+        else
+        {
+            this.gameObject.transform.rotation = Quaternion.Euler(0, 200, 0);
+        }
+
     }
 }

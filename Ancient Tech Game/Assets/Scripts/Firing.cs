@@ -20,8 +20,6 @@ public class Firing : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        
-
         Vector3 pos = Camera.main.WorldToScreenPoint(transform.position);
         Vector3 dir = Input.mousePosition - pos;
 
