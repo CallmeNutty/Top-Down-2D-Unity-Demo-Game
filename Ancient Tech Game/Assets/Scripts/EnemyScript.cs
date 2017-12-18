@@ -8,7 +8,9 @@ public class EnemyScript : MonoBehaviour
     private bool targetingCivillian;
     [SerializeField]
     private float runSpeed;
-    
+
+    [SerializeField]
+    private TrackCivillians trackCivillians;
     private GameObject chosenCivillian;
     private GameObject[] civillians;
 
@@ -17,10 +19,16 @@ public class EnemyScript : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D coll)
     {
         //If collided with chosenCivillian
-        if (coll.gameObject == chosenCivillian)
+        if (coll.gameObject.tag == "Civillian")
+        {
+            trackCivillians.civillianCount--;
+            Destroy(coll.gameObject);
+            Destroy(gameObject);
+        }
+        else if (coll.gameObject.tag == "Bullet")
         {
             Destroy(coll.gameObject);
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
         else
         {
@@ -33,6 +41,8 @@ public class EnemyScript : MonoBehaviour
     {
         //Populate Array with gameObjects that have Civillian tags
         civillians = GameObject.FindGameObjectsWithTag("Civillian");
+
+        trackCivillians.civillianCount = civillians.Length;
 	}
 
     // Update is called once per frame

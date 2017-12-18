@@ -87,5 +87,6 @@ Assets/Scripts/BulletScript.cs
 Assets/Scripts/EnemyScript.cs
 Assets/Scripts/Firing.cs
 Assets/Scripts/PlayerMovement.cs
+Assets/Scripts/TrackCivillians.cs
 -r:"C:\Program Files\Unity\Editor\Data\Mono\lib\mono\unity\System.Runtime.Serialization.dll"
 -r:"C:\Program Files\Unity\Editor\Data\Mono\lib\mono\unity\System.Xml.Linq.dll"

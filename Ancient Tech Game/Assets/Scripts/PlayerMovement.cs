@@ -39,11 +39,11 @@ public class PlayerMovement : MonoBehaviour {
 
         if (angle > 90 || angle < -90)
         {
-            this.gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+            gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         else
         {
-            this.gameObject.transform.rotation = Quaternion.Euler(0, 200, 0);
+            gameObject.transform.rotation = Quaternion.Euler(0, 200, 0);
         }
 
     }

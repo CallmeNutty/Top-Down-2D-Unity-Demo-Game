@@ -86,6 +86,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runSpeed: 0.01
+  trackCivillians: {fileID: 0}
 --- !u!212 &212000011200728234
 SpriteRenderer:
   m_ObjectHideFlags: 1
