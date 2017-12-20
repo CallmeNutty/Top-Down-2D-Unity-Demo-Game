@@ -24,7 +24,7 @@ GameObject:
   - 61: {fileID: 61000011142921690}
   - 50: {fileID: 50000013413119286}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Slime
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85,8 +85,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c711b5cfc498dc459e4ea6364927205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 0.01
-  trackCivillians: {fileID: 0}
+  runSpeed: 2
+  gameManager: {fileID: 1000010346372660, guid: 992d7d86fec12f2459a5796d76d936ef,
+    type: 2}
 --- !u!212 &212000011200728234
 SpriteRenderer:
   m_ObjectHideFlags: 1

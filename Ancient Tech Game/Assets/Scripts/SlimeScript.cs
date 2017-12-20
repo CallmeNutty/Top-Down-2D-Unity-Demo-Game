@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemyScript : MonoBehaviour
+public class SlimeScript : MonoBehaviour
 {
 
     //Declare Variables
@@ -10,6 +10,7 @@ public class EnemyScript : MonoBehaviour
     private float runSpeed;
 
     [SerializeField]
+    private GameObject gameManager;
     private TrackCivillians trackCivillians;
     private GameObject chosenCivillian;
     private GameObject[] civillians;
@@ -25,6 +26,7 @@ public class EnemyScript : MonoBehaviour
             Destroy(coll.gameObject);
             Destroy(gameObject);
         }
+        //Or if collided with Bullet
         else if (coll.gameObject.tag == "Bullet")
         {
             Destroy(coll.gameObject);
@@ -41,6 +43,8 @@ public class EnemyScript : MonoBehaviour
     {
         //Populate Array with gameObjects that have Civillian tags
         civillians = GameObject.FindGameObjectsWithTag("Civillian");
+
+        trackCivillians = gameManager.GetComponent<TrackCivillians>();
 
         trackCivillians.civillianCount = civillians.Length;
 	}
@@ -62,7 +66,7 @@ public class EnemyScript : MonoBehaviour
         //Otherwise if you are targeting a civillian
         else if (targetingCivillian == true)
         {
-            gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, chosenCivillian.transform.position, runSpeed); //Move towards Civ
+            gameObject.transform.position = Vector2.MoveTowards(gameObject.transform.position, chosenCivillian.transform.position, runSpeed * Time.deltaTime); //Move towards Civ
         }
     }
 }
