@@ -15,6 +15,13 @@ public class BulletScript : MonoBehaviour {
         {
             Destroy(gameObject);
         }
+        
+        //Or if collided with Enemy
+        else if (coll.gameObject.tag == "Enemy")
+        {
+            Destroy(coll.gameObject);
+            Destroy(gameObject);
+        }
     }
 
     // Use this for initialization

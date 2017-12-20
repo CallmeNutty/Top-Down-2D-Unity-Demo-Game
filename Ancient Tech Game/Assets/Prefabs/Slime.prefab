@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011352654920}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.3355701, y: 4.5193424, z: 0}
+  m_LocalPosition: {x: 1.59, y: 8.51, z: 0}
   m_LocalScale: {x: 2.7973166, y: 2.7973166, z: 2.7973166}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -85,9 +85,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c711b5cfc498dc459e4ea6364927205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 2
-  gameManager: {fileID: 1000010346372660, guid: 992d7d86fec12f2459a5796d76d936ef,
-    type: 2}
+  runSpeed: 1
+  enemies: {fileID: 0}
 --- !u!212 &212000011200728234
 SpriteRenderer:
   m_ObjectHideFlags: 1

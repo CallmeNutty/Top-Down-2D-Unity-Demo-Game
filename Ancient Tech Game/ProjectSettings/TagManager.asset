@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Civillian
+  - Bullet
   layers:
   - Default
   - TransparentFX

@@ -13,10 +13,4 @@ public class TrackCivillians : MonoBehaviour
         //Populate List with Objects with tag "Civillian"
         civillians = new List<GameObject>(GameObject.FindGameObjectsWithTag("Civillian"));
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        print(civillians.Count);
-    }
 }

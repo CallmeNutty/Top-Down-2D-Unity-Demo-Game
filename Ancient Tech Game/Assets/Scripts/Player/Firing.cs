@@ -10,12 +10,6 @@ public class Firing : MonoBehaviour
     private GameObject bulletSpawner;
     [SerializeField]
     private GameObject emptyBullet;
-
-	// Use this for initialization
-	void Start ()
-    {
-	
-	}
 	
 	// Update is called once per frame
 	void Update ()
