@@ -13,7 +13,6 @@ public class SlimeScript : MonoBehaviour
     private GameObject gameManager;
     private TrackCivillians trackCivillians;
     private GameObject chosenCivillian;
-    private GameObject[] civillians;
 
 
     //Collisions with Civillians
@@ -22,7 +21,7 @@ public class SlimeScript : MonoBehaviour
         //If collided with chosenCivillian
         if (coll.gameObject.tag == "Civillian")
         {
-            trackCivillians.civillianCount--;
+            TrackCivillians.civillians.Remove(chosenCivillian);
             Destroy(coll.gameObject);
             Destroy(gameObject);
         }
@@ -41,12 +40,7 @@ public class SlimeScript : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-        //Populate Array with gameObjects that have Civillian tags
-        civillians = GameObject.FindGameObjectsWithTag("Civillian");
-
         trackCivillians = gameManager.GetComponent<TrackCivillians>();
-
-        trackCivillians.civillianCount = civillians.Length;
 	}
 
     // Update is called once per frame
@@ -56,7 +50,7 @@ public class SlimeScript : MonoBehaviour
         if (targetingCivillian == false)
         {
             targetingCivillian = true; //Now targetting a civ due to following line
-            chosenCivillian = civillians[Random.Range(0, civillians.Length)]; //Pick random Civ
+            chosenCivillian = TrackCivillians.civillians[Random.Range(0, TrackCivillians.civillians.Count)]; //Pick random Civ
         }
         //If chosen Civillian no longer exists
         else if (chosenCivillian == null)
