@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GolemScript : MonoBehaviour {
+public class GolemScript : MonoBehaviour
+{
 
 
 }

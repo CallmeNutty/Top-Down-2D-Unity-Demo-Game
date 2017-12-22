@@ -406,6 +406,11 @@ Prefab:
       propertyPath: m_Name
       value: Slime (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 114000010321029948, guid: ead887b1f33ab9040b90bbd4db4d348b,
+        type: 2}
+      propertyPath: Enemies
+      value: 
+      objectReference: {fileID: 1428488816}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ead887b1f33ab9040b90bbd4db4d348b, type: 2}
   m_IsPrefabParent: 0
@@ -594,25 +599,20 @@ Prefab:
       propertyPath: m_Name
       value: Slime (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114000010321029948, guid: ead887b1f33ab9040b90bbd4db4d348b,
+        type: 2}
+      propertyPath: Enemies
+      value: 
+      objectReference: {fileID: 1428488816}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ead887b1f33ab9040b90bbd4db4d348b, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1428488813 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000010346372660, guid: 992d7d86fec12f2459a5796d76d936ef,
+--- !u!114 &1428488816 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000012428881716, guid: 992d7d86fec12f2459a5796d76d936ef,
     type: 2}
   m_PrefabInternal: {fileID: 608823289}
---- !u!114 &1428488816
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1428488813}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db8e5056e5b4eed46866c23e8335b959, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1439368607
 GameObject:
   m_ObjectHideFlags: 0
@@ -736,7 +736,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114000010321029948, guid: ead887b1f33ab9040b90bbd4db4d348b,
         type: 2}
-      propertyPath: enemies
+      propertyPath: Enemies
       value: 
       objectReference: {fileID: 1428488816}
     m_RemovedComponents: []

@@ -85,8 +85,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c711b5cfc498dc459e4ea6364927205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 1
-  enemies: {fileID: 0}
+  Enemies: {fileID: 0}
 --- !u!212 &212000011200728234
 SpriteRenderer:
   m_ObjectHideFlags: 1
