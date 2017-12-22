@@ -19,15 +19,15 @@ public class SlimeScript : MonoBehaviour
         if (coll.gameObject.tag == "Civillian")
         {
             //Kill civillian that was collided with
-            Enemies.KillCivillian(coll, chosenCivillian);
+            Enemies.KillCivillian(coll, chosenCivillian, gameObject);
         }
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         //If not currently targeting a Civillian
-        if (chosenCivillian == null)
+        if (chosenCivillian == null && TrackCivillians.gameOver == false)
         {
             //Pick a random civillian
             chosenCivillian = Enemies.PickCivillian();

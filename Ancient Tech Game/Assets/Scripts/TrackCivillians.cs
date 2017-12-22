@@ -5,6 +5,8 @@ using System.Collections.Generic;
 public class TrackCivillians : MonoBehaviour
 {
     //Declare Variables
+    public static bool gameOver;
+
     public static List<GameObject> civillians;
 
 	// Use this for initialization
