@@ -11,7 +11,7 @@ public class GolemScript : MonoBehaviour
     private Rigidbody2D rb2d;
 
     //Create an instance of the "Enemy" base class
-    Enemies.Enemy Golem = new Enemies.Enemy(20, 0.10f);
+    Enemies.Enemy Golem = new Enemies.Enemy(20, 10f);
 
     //Co Routine to stop Lunging
     private IEnumerator StopLunging()
@@ -55,7 +55,7 @@ public class GolemScript : MonoBehaviour
         else
         {
             //Lunge at Civ
-            rb2d.AddForce((chosenCivillian.transform.position - gameObject.transform.position).normalized * Golem.speed, ForceMode2D.Impulse);
+            rb2d.AddForce((chosenCivillian.transform.position - gameObject.transform.position).normalized * Golem.speed * Time.deltaTime, ForceMode2D.Impulse);
         }
     }
 }
