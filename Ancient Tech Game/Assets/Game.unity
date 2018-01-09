@@ -139,6 +139,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 212000011349359640, guid: ec5df77f4577cdd4da7ca294b8a3a083,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 624225231
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec5df77f4577cdd4da7ca294b8a3a083, type: 2}
   m_IsPrefabParent: 0
@@ -298,6 +303,11 @@ Prefab:
       propertyPath: m_Name
       value: Civillian (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 212000011349359640, guid: ec5df77f4577cdd4da7ca294b8a3a083,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 624225231
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec5df77f4577cdd4da7ca294b8a3a083, type: 2}
   m_IsPrefabParent: 0
@@ -363,6 +373,11 @@ Prefab:
         type: 2}
       propertyPath: m_IsTrigger
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212000011200728234, guid: ead887b1f33ab9040b90bbd4db4d348b,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 624225231
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ead887b1f33ab9040b90bbd4db4d348b, type: 2}
@@ -445,7 +460,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: 624225231
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1b09275c9db2ed949ac0c4fc2dd1aa4f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -567,6 +582,11 @@ Prefab:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 212000011200728234, guid: ead887b1f33ab9040b90bbd4db4d348b,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 624225231
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ead887b1f33ab9040b90bbd4db4d348b, type: 2}
   m_IsPrefabParent: 0
@@ -614,16 +634,6 @@ Prefab:
       propertyPath: Enemies
       value: 
       objectReference: {fileID: 1428488816}
-    - target: {fileID: 50000012301541734, guid: b86ab18c0b537cb4d96357f1bb72e93e,
-        type: 2}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 61000013001777694, guid: b86ab18c0b537cb4d96357f1bb72e93e,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b86ab18c0b537cb4d96357f1bb72e93e, type: 2}
   m_IsPrefabParent: 0
@@ -664,6 +674,22 @@ Transform:
   - {fileID: 867474842}
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!1 &1597612387 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010346372660, guid: 992d7d86fec12f2459a5796d76d936ef,
+    type: 2}
+  m_PrefabInternal: {fileID: 608823289}
+--- !u!114 &1597612390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1597612387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63f86d65d4bbcee41a1877ba34531bc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1643013862
 Prefab:
   m_ObjectHideFlags: 0
@@ -706,6 +732,11 @@ Prefab:
     - target: {fileID: 1000011882562578, guid: ec5df77f4577cdd4da7ca294b8a3a083, type: 2}
       propertyPath: m_Name
       value: Civillian (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 212000011349359640, guid: ec5df77f4577cdd4da7ca294b8a3a083,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 624225231
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec5df77f4577cdd4da7ca294b8a3a083, type: 2}
@@ -759,16 +790,6 @@ Prefab:
       propertyPath: Enemies
       value: 
       objectReference: {fileID: 1428488816}
-    - target: {fileID: 50000013413119286, guid: ead887b1f33ab9040b90bbd4db4d348b,
-        type: 2}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 61000011142921690, guid: ead887b1f33ab9040b90bbd4db4d348b,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ead887b1f33ab9040b90bbd4db4d348b, type: 2}
   m_IsPrefabParent: 0

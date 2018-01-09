@@ -27,7 +27,7 @@ public class SlimeScript : MonoBehaviour
     void LateUpdate()
     {
         //If not currently targeting a Civillian
-        if (chosenCivillian == null && TrackCivillians.gameOver == false)
+        if (chosenCivillian == null)
         {
             //Pick a random civillian
             chosenCivillian = Enemies.PickCivillian();

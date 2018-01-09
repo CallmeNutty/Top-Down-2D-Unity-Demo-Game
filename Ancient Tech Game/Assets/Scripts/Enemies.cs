@@ -20,37 +20,39 @@ public class Enemies : MonoBehaviour
         public float speed;
     }
 
+    //Is called every Frame
+    void Update()
+    {
+        //if all civillians are dead
+        if (TrackMobs.civillians.Count == 0)
+        {
+            //Kill every Enemy
+            for (int k = 0; k < TrackMobs.enemies.Count; k++)
+            {
+                Destroy(TrackMobs.enemies[k]);
+                TrackMobs.enemies.RemoveAt(k);
+            }
+        }
+    }
+
 
     //Picks a random Civillian
     public GameObject PickCivillian()
     {
         //Pick random Civ
-        return TrackCivillians.civillians[Random.Range(0, TrackCivillians.civillians.Count)];
+        return TrackMobs.civillians[Random.Range(0, TrackMobs.civillians.Count)];
     }
 
     //Kills Civillian that you collided with
     public void KillCivillian(Collision2D collider2D, GameObject chosenCivillian, GameObject thisEnemy)
     {
         //Remove Civillian from the "civillians" list
-        TrackCivillians.civillians.Remove(chosenCivillian);
+        TrackMobs.civillians.Remove(chosenCivillian);
+        //Remove Enemy from the "enemies" list as mobs die with civillians
+        TrackMobs.enemies.Remove(thisEnemy);
         //Proceed to destroy civillian and this gameObject respectively
         Destroy(collider2D.gameObject);
         Destroy(thisEnemy);
-    }
-
-    //Is called every Frame
-    void Update()
-    {
-        if (TrackCivillians.civillians.Count == 0)
-        {
-            GameObject[] Temp = GameObject.FindGameObjectsWithTag("Enemy");
-            for (int k = 0; k < Temp.Length; k++)
-            {
-                Destroy(Temp[k]);
-            }
-        }
-
-        Debug.Log(TrackCivillians.civillians.Count);
     }
 
 }

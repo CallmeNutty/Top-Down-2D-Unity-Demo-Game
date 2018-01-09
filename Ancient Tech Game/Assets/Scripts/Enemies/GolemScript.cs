@@ -11,9 +11,9 @@ public class GolemScript : MonoBehaviour
     private Rigidbody2D rb2d;
 
     //Create an instance of the "Enemy" base class
-    Enemies.Enemy Golem = new Enemies.Enemy(20, 0.25f);
+    Enemies.Enemy Golem = new Enemies.Enemy(20, 0.10f);
 
-
+    //Co Routine to stop Lunging
     private IEnumerator StopLunging()
     {
         float stopTimer;

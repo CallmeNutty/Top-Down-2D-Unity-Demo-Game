@@ -19,6 +19,7 @@ public class BulletScript : MonoBehaviour {
         //Or if collided with Enemy
         else if (coll.gameObject.tag == "Enemy")
         {
+            TrackMobs.enemies.Remove(coll.gameObject);
             Destroy(coll.gameObject);
             Destroy(gameObject);
         }
