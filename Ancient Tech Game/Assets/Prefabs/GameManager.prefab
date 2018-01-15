@@ -21,6 +21,7 @@ GameObject:
   - 4: {fileID: 4000013703205430}
   - 114: {fileID: 114000011272326874}
   - 114: {fileID: 114000012428881716}
+  - 114: {fileID: 114000012864126224}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -63,3 +64,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db8e5056e5b4eed46866c23e8335b959, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114000012864126224
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010346372660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63f86d65d4bbcee41a1877ba34531bc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveCounter: {fileID: 0}
+  slime: {fileID: 1000011352654920, guid: ead887b1f33ab9040b90bbd4db4d348b, type: 2}
+  golem: {fileID: 1000014118025964, guid: b86ab18c0b537cb4d96357f1bb72e93e, type: 2}
