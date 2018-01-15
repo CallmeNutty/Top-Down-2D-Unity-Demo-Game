@@ -5,6 +5,8 @@ public class Firing : MonoBehaviour
 {
 
     [SerializeField]
+    private AudioSource gunSound;
+    [SerializeField]
     private GameObject bullet;
     [SerializeField]
     private GameObject bulletSpawner;
@@ -23,6 +25,7 @@ public class Firing : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Instantiate(bullet, new Vector3(bulletSpawner.transform.position.x, bulletSpawner.transform.position.y), bulletSpawner.transform.rotation, emptyBullet.transform);
+            gunSound.Play();
         }
     }
 }

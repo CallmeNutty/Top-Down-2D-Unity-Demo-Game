@@ -51,7 +51,7 @@ public class TurnManager : MonoBehaviour {
             {
                 for (int k = 0; k < mobList.Count; k++)
                 {
-                    createdMob = Instantiate(mobList[k], PickSpawnPoint(-20, 20, 20, -20, 30, 30), Quaternion.identity) as GameObject;
+                    createdMob = Instantiate(mobList[k], PickSpawnPoint(-16, 16, 16, -16, 8, 8), Quaternion.identity) as GameObject;
                     TrackMobs.enemies.Add(createdMob);
                     if (k == mobList.Count - 1) { enemiesSpawned = true; }
                 }

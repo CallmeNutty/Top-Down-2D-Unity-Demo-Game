@@ -15,12 +15,18 @@ public class SlimeScript : MonoBehaviour
     //Collisions with Civillians
     private void OnCollisionEnter2D(Collision2D coll)
     {
+
         //If collided with chosenCivillian
         if (coll.gameObject.tag == "Civillian")
         {
             //Kill civillian that was collided with
             Enemies.KillCivillian(coll, chosenCivillian, gameObject);
         }
+    }
+
+    void Start()
+    {
+        Enemies = GameObject.FindGameObjectWithTag("GameController").GetComponent<Enemies>();
     }
 
     // Update is called once per frame

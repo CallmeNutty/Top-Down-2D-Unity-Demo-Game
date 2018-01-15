@@ -40,6 +40,8 @@ public class GolemScript : MonoBehaviour
     void Start()
     {
         StartCoroutine(StopLunging());
+        Enemies = GameObject.FindGameObjectWithTag("GameController").GetComponent<Enemies>();
+        
     }
 
     // Update is called once per frame
