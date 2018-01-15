@@ -13,12 +13,14 @@ public class TurnManager : MonoBehaviour {
     private GameObject slime;
     [SerializeField]
     private GameObject golem;
+    private GameObject createdMob;
 
     public int enemiesThisWave;
     private bool waveOver;
+    private bool enemiesSpawned;
     private int wave = 0;
-    public float counter = 5;
-    public int prepTime = 5;
+    public float counter;
+    public int prepTime;
 	
 	// Update is called once per frame
 	void Update ()
@@ -28,12 +30,16 @@ public class TurnManager : MonoBehaviour {
         {
             wave++;
             waveOver = true; //Prevent this tree from running again until next wave
+            enemiesSpawned = false;
             counter += prepTime; //Reset the counter
-            
+
+            mobList.Clear();
+            enemiesThisWave = ScaleDifficulty(wave, 1.5f);
+
             //Adds random enemies to the Moblist
             for (int k = 0; k < enemiesThisWave; k++)
             {
-                mobList.Add(PickEnemies(slime, golem, 0.8f, 0.2f));
+                mobList.Add(PickEnemies(slime, golem, 0.8f, 0.4f));
             }
         }
         //If timer has run out
@@ -41,9 +47,14 @@ public class TurnManager : MonoBehaviour {
         {
             waveOver = false; //Allow first tree to run again
 
-            for (int k = 0; k < mobList.Count; k++)
+            if (enemiesSpawned == false)
             {
-                Instantiate(mobList[k], PickSpawnPoint(-20, 20, 20, -20, 30, 10), Quaternion.identity);
+                for (int k = 0; k < mobList.Count; k++)
+                {
+                    createdMob = Instantiate(mobList[k], PickSpawnPoint(-20, 20, 20, -20, 30, 30), Quaternion.identity) as GameObject;
+                    TrackMobs.enemies.Add(createdMob);
+                    if (k == mobList.Count - 1) { enemiesSpawned = true; }
+                }
             }
         }
         //If counter hasn't run out yet
@@ -56,20 +67,21 @@ public class TurnManager : MonoBehaviour {
         waveCounter.text = string.Format("Wave {0} starts in: {1}", wave ,Mathf.Round(counter));
     }
 
+
     //Method which picks random GameObject based on percentage chance
     GameObject PickEnemies(GameObject slime, GameObject golem, float slimeChance, float golemChance)
     {
+        //If random value is less than chance for slime to spawn
         if (Random.value <= slimeChance)
         {
-            print("slime");
             return slime;
         }
         else if (Random.value <= golemChance)
         {
-            print("golem");
             return golem;
         }
 
+        //By default return a slime
         return slime;
     }
 
@@ -79,9 +91,11 @@ public class TurnManager : MonoBehaviour {
         float yPos;
         float xPos;
 
+        //Decide which general directions it will be spawning in
         bool spawnLeft = Random.Range(1, 3) == 1;
         bool spawnTop = Random.Range(1, 3) == 1;
 
+        //Choose value based on given value subtracted and added by the range
         if (spawnLeft == true)
         {
             yPos = Random.Range(leftY - YRange, leftY + YRange);
@@ -100,9 +114,13 @@ public class TurnManager : MonoBehaviour {
             xPos = Random.Range(bottomX - XRange, bottomX + XRange);
         }
 
-        print("xpos = " + xPos);
-        print("ypos = " + yPos);
-
+        //Return the xPos and yPos as a 3D Vector
         return new Vector3(xPos, yPos);
+    }
+
+    //Method which scales difficulty based on wave
+    int ScaleDifficulty(int wave, float difficulty)
+    {
+        return Random.Range(Mathf.RoundToInt(difficulty * wave), Mathf.RoundToInt(difficulty * wave) + Mathf.RoundToInt(Mathf.Pow(difficulty, 4)));
     }
 }

@@ -83,6 +83,8 @@
 -define:UNITY_EDITOR_WIN
 -define:UNITY_TEAM_LICENSE
 -define:ENABLE_VSTU
+Assets/Scripts/Difficulty.cs
+Assets/Scripts/DifficultyManager.cs
 Assets/Scripts/Enemies.cs
 Assets/Scripts/Enemies/GolemScript.cs
 Assets/Scripts/Enemies/SlimeScript.cs
