@@ -147,7 +147,7 @@ GameObject:
   - 4: {fileID: 430507307}
   m_Layer: 0
   m_Name: Bullets
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -712,7 +712,7 @@ Prefab:
         type: 2}
       propertyPath: slimeDeathSound
       value: 
-      objectReference: {fileID: 8300000, guid: 7f4824f553ff1604a907a2b292995a23, type: 3}
+      objectReference: {fileID: 899063425}
     - target: {fileID: 114000011672453496, guid: 992d7d86fec12f2459a5796d76d936ef,
         type: 2}
       propertyPath: golemDeathSound

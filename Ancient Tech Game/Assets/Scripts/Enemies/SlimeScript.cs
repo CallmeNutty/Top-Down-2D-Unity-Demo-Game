@@ -15,6 +15,13 @@ public class SlimeScript : MonoBehaviour
     //Collisions with Civillians
     private void OnCollisionEnter2D(Collision2D coll)
     {
+        if (coll.gameObject.tag == "Bullet")
+        {
+            TrackMobs.enemies.Remove(coll.gameObject);
+            Enemies.slimeDeathSound.Play();
+            Destroy(coll.gameObject);
+            Destroy(gameObject);
+        }
 
         //If collided with chosenCivillian
         if (coll.gameObject.tag == "Civillian")

@@ -25,7 +25,7 @@ GameObject:
   - 61: {fileID: 61000013001777694}
   - 82: {fileID: 82000010678255582}
   m_Layer: 8
-  m_Name: Golem
+  m_Name: Rushman
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

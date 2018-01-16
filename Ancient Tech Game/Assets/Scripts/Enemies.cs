@@ -4,8 +4,8 @@ using System.Collections;
 public class Enemies : MonoBehaviour
 {
 
-    public AudioClip slimeDeathSound;
-    public AudioSource golemDeathSound;
+    public AudioSource slimeDeathSound;
+    public AudioSource rushmanDeathSound;
 
     //Base Class for Enemy Mobs
     public class Enemy
@@ -48,8 +48,7 @@ public class Enemies : MonoBehaviour
 
     //Kills Civillian that you collided with
     public void KillCivillian(Collision2D collider2D, GameObject chosenCivillian, GameObject thisEnemy)
-    {
-        AudioSource.PlayClipAtPoint(slimeDeathSound, new Vector3(0,0,0), 1);
+    {     
         //Remove Civillian from the "civillians" list
         TrackMobs.civillians.Remove(chosenCivillian);
         //Remove Enemy from the "enemies" list as mobs die with civillians

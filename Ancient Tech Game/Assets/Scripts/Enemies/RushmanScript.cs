@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GolemScript : MonoBehaviour
+public class RushmanScript : MonoBehaviour
 {
     //Declare Variables
     [SerializeField]
@@ -11,10 +11,10 @@ public class GolemScript : MonoBehaviour
     private Rigidbody2D rb2d;
 
     //Create an instance of the "Enemy" base class
-    Enemies.Enemy Golem = new Enemies.Enemy(20, 10f);
+    Enemies.Enemy Rushman = new Enemies.Enemy(20, 10f);
 
     //Co Routine to stop Lunging
-    private IEnumerator StopLunging()
+    private IEnumerator StopDashing()
     {
         float stopTimer;
 
@@ -39,7 +39,7 @@ public class GolemScript : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(StopLunging());
+        StartCoroutine(StopDashing());
         Enemies = GameObject.FindGameObjectWithTag("GameController").GetComponent<Enemies>();
         
     }
@@ -57,7 +57,7 @@ public class GolemScript : MonoBehaviour
         else
         {
             //Lunge at Civ
-            rb2d.AddForce((chosenCivillian.transform.position - gameObject.transform.position).normalized * Golem.speed * Time.deltaTime, ForceMode2D.Impulse);
+            rb2d.AddForce((chosenCivillian.transform.position - gameObject.transform.position).normalized * Rushman.speed * Time.deltaTime, ForceMode2D.Impulse);
         }
     }
 }

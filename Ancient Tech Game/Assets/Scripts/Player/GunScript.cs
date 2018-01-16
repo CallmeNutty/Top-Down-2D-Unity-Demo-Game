@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BulletScript : MonoBehaviour {
+public class GunScript : MonoBehaviour
+{
 
     [SerializeField]
     private float bulletSpeed;
@@ -9,18 +10,21 @@ public class BulletScript : MonoBehaviour {
     [SerializeField]
     private Rigidbody2D rb2d;
 
+    public class Weapon
+    {
+        public string name;
+        public int damage;
+    }
+
+    public class Firearm : Weapon
+    {
+         
+    }
+
     private void OnCollisionEnter2D(Collision2D coll)
     {
         if (coll.gameObject.tag == "Civillian")
         {
-            Destroy(gameObject);
-        }
-        
-        //Or if collided with Enemy
-        else if (coll.gameObject.tag == "Enemy")
-        {
-            TrackMobs.enemies.Remove(coll.gameObject);
-            Destroy(coll.gameObject);
             Destroy(gameObject);
         }
     }

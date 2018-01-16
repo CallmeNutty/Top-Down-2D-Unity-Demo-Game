@@ -12,7 +12,7 @@ public class TurnManager : MonoBehaviour {
     [SerializeField]
     private GameObject slime;
     [SerializeField]
-    private GameObject golem;
+    private GameObject rushman;
     private GameObject createdMob;
 
     public int enemiesThisWave;
@@ -39,7 +39,7 @@ public class TurnManager : MonoBehaviour {
             //Adds random enemies to the Moblist
             for (int k = 0; k < enemiesThisWave; k++)
             {
-                mobList.Add(PickEnemies(slime, golem, 0.8f, 0.4f));
+                mobList.Add(PickEnemies(slime, rushman, 0.8f, 0.4f));
             }
         }
         //If timer has run out
@@ -69,16 +69,16 @@ public class TurnManager : MonoBehaviour {
 
 
     //Method which picks random GameObject based on percentage chance
-    GameObject PickEnemies(GameObject slime, GameObject golem, float slimeChance, float golemChance)
+    GameObject PickEnemies(GameObject slime, GameObject rushman, float slimeChance, float rushmanChance)
     {
         //If random value is less than chance for slime to spawn
         if (Random.value <= slimeChance)
         {
             return slime;
         }
-        else if (Random.value <= golemChance)
+        else if (Random.value <= rushmanChance)
         {
-            return golem;
+            return rushman;
         }
 
         //By default return a slime
@@ -124,3 +124,4 @@ public class TurnManager : MonoBehaviour {
         return Random.Range(Mathf.RoundToInt(difficulty * wave), Mathf.RoundToInt(difficulty * wave) + Mathf.RoundToInt(Mathf.Pow(difficulty, 4)));
     }
 }
+ 
