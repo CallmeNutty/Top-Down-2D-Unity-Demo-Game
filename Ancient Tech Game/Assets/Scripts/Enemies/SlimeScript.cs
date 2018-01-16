@@ -17,7 +17,7 @@ public class SlimeScript : MonoBehaviour
     {
         if (coll.gameObject.tag == "Bullet")
         {
-            TrackMobs.enemies.Remove(coll.gameObject);
+            TrackMobs.enemies.Remove(gameObject);
             Enemies.slimeDeathSound.Play();
             Destroy(coll.gameObject);
             Destroy(gameObject);

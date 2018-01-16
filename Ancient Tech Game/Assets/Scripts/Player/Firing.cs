@@ -20,11 +20,11 @@ public class Firing : MonoBehaviour
         Vector3 dir = Input.mousePosition - pos;
 
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        bulletSpawner.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        gameObject.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
         if (Input.GetMouseButtonDown(0))
         {
-            Instantiate(bullet, new Vector3(bulletSpawner.transform.position.x, bulletSpawner.transform.position.y), bulletSpawner.transform.rotation, emptyBullet.transform);
+            Instantiate(bullet, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y), gameObject.transform.rotation, emptyBullet.transform);
             gunSound.Play();
         }
     }
