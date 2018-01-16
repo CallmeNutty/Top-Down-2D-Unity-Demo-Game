@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GunScript : MonoBehaviour
+public class BulletScript : MonoBehaviour
 {
 
     [SerializeField]
@@ -9,17 +9,6 @@ public class GunScript : MonoBehaviour
 
     [SerializeField]
     private Rigidbody2D rb2d;
-
-    public class Weapon
-    {
-        public string name;
-        public int damage;
-    }
-
-    public class Firearm : Weapon
-    {
-         
-    }
 
     private void OnCollisionEnter2D(Collision2D coll)
     {

@@ -40,8 +40,7 @@ public class RushmanScript : MonoBehaviour
     void Start()
     {
         StartCoroutine(StopDashing());
-        Enemies = GameObject.FindGameObjectWithTag("GameController").GetComponent<Enemies>();
-        
+        Enemies = GameObject.FindGameObjectWithTag("GameController").GetComponent<Enemies>();  
     }
 
     // Update is called once per frame
