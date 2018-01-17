@@ -6,6 +6,8 @@ public class BulletScript : MonoBehaviour
 
     [SerializeField]
     private float bulletSpeed;
+    [HideInInspector]
+    public int damage;
 
     [SerializeField]
     private Rigidbody2D rb2d;
@@ -18,9 +20,17 @@ public class BulletScript : MonoBehaviour
         }
     }
 
+    private IEnumerator SelfDestruct(int time)
+    {
+        yield return new WaitForSeconds(time);
+        Destroy(gameObject);
+    }
+
     // Use this for initialization
     void Start ()
     {
+        StartCoroutine(SelfDestruct(5));
         rb2d.AddRelativeForce(new Vector2(bulletSpeed, 0), ForceMode2D.Impulse);
+        print(damage);
 	}
 }

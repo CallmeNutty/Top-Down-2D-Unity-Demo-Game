@@ -13,14 +13,12 @@ public class SlimeScript : MonoBehaviour
     Enemies.Enemy Slime = new Enemies.Enemy(10, 1);
 
     //Collisions with Civillians
-    private void OnCollisionEnter2D(Collision2D coll)
+    private void OnTriggerEnter2D(Collider2D coll)
     {
         if (coll.gameObject.tag == "Bullet")
         {
-            TrackMobs.enemies.Remove(gameObject);
-            Enemies.slimeDeathSound.Play();
+            Slime.health -= coll.gameObject.GetComponent<BulletScript>().damage;
             Destroy(coll.gameObject);
-            Destroy(gameObject);
         }
 
         //If collided with chosenCivillian
@@ -34,6 +32,16 @@ public class SlimeScript : MonoBehaviour
     void Start()
     {
         Enemies = GameObject.FindGameObjectWithTag("GameController").GetComponent<Enemies>();
+    }
+
+    void Update()
+    {
+        if (Slime.health <= 0)
+        {
+            TrackMobs.enemies.Remove(gameObject);
+            Enemies.slimeDeathSound.Play();
+            Destroy(gameObject);
+        }
     }
 
     // Update is called once per frame

@@ -27,7 +27,7 @@ public class RushmanScript : MonoBehaviour
     }
 
     //Collisions with Civillians
-    private void OnCollisionEnter2D(Collision2D coll)
+    private void OnTriggerEnter2D(Collider2D coll)
     {
         //If collided with chosenCivillian
         if (coll.gameObject.tag == "Civillian")
@@ -35,12 +35,28 @@ public class RushmanScript : MonoBehaviour
             //Kill civillian that was collided with
             Enemies.KillCivillian(coll, chosenCivillian, gameObject);
         }
+
+        if (coll.gameObject.tag == "Bullet")
+        {
+            Rushman.health -= coll.gameObject.GetComponent<BulletScript>().damage;
+            Destroy(coll.gameObject);
+        }
     }
 
     void Start()
     {
         StartCoroutine(StopDashing());
         Enemies = GameObject.FindGameObjectWithTag("GameController").GetComponent<Enemies>();  
+    }
+
+    void Update()
+    {
+        if (Rushman.health <= 0)
+        {
+            TrackMobs.enemies.Remove(gameObject);
+            Enemies.rushmanDeathSound.Play();
+            Destroy(gameObject);
+        }
     }
 
     // Update is called once per frame

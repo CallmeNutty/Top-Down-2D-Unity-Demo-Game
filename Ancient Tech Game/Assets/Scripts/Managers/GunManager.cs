@@ -10,11 +10,12 @@ public class GunManager : MonoBehaviour
         public string name;
         public int damage;
     }
+
     [System.Serializable]
-    public class Firearm : Weapon
+    public class Melee : Weapon
     {
-        public bool automatic;
+        public int swingSpeed;
     }
 
-    public Firearm firearm;
+    public Melee melee;
 }

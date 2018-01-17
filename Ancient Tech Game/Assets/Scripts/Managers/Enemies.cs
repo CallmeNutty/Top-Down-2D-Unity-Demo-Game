@@ -47,7 +47,7 @@ public class Enemies : MonoBehaviour
     }
 
     //Kills Civillian that you collided with
-    public void KillCivillian(Collision2D collider2D, GameObject chosenCivillian, GameObject thisEnemy)
+    public void KillCivillian(Collider2D collider2D, GameObject chosenCivillian, GameObject thisEnemy)
     {     
         //Remove Civillian from the "civillians" list
         TrackMobs.civillians.Remove(chosenCivillian);

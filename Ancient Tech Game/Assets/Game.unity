@@ -90,26 +90,6 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &215820222 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000010346372660, guid: 992d7d86fec12f2459a5796d76d936ef,
-    type: 2}
-  m_PrefabInternal: {fileID: 1510501923}
---- !u!114 &215820223
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 215820222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bda45f0021794242905bd2916d6aa9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firearm:
-    name: 
-    damage: 0
-    automatic: 0
 --- !u!1001 &245899805
 Prefab:
   m_ObjectHideFlags: 0
@@ -228,8 +208,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gunSound: {fileID: 1672513301}
+  gunManager: {fileID: 0}
+  firearmManager: {fileID: 0}
   bullet: {fileID: 1000011266190940, guid: f7965d7e60ff4c74f885519e2265bea2, type: 2}
-  bulletSpawner: {fileID: 0}
+  bulletSpawner: {fileID: 433609134}
   emptyBullet: {fileID: 430507306}
 --- !u!4 &563980782 stripped
 Transform:
@@ -663,6 +645,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1242016540}
   - 212: {fileID: 1242016541}
+  - 114: {fileID: 1242016542}
   m_Layer: 0
   m_Name: RustyGun
   m_TagString: Untagged
@@ -677,7 +660,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1242016539}
   m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
-  m_LocalPosition: {x: 0.308, y: 0.006159541, z: 0}
+  m_LocalPosition: {x: 0.155, y: 0.006159541, z: 0}
   m_LocalScale: {x: 1.4601927, y: 1.4601927, z: 1.4601927}
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
   m_Children: []
@@ -716,6 +699,25 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1242016542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1242016539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b562037562d2d4ea02bdb33c572001, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  melee:
+    name: 
+    damage: 0
+    swingSpeed: 0
+  firearm:
+    name: 
+    damage: 0
+    automatic: 0
 --- !u!1 &1339232001
 GameObject:
   m_ObjectHideFlags: 0
