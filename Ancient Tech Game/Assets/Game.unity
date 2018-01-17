@@ -208,8 +208,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gunSound: {fileID: 1672513301}
-  gunManager: {fileID: 0}
-  firearmManager: {fileID: 0}
+  gunManager: {fileID: 1043009250}
+  firearmManager: {fileID: 1242016542}
   bullet: {fileID: 1000011266190940, guid: f7965d7e60ff4c74f885519e2265bea2, type: 2}
   bulletSpawner: {fileID: 433609134}
   emptyBullet: {fileID: 430507306}
@@ -513,6 +513,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
+--- !u!1 &1043009249 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010346372660, guid: 992d7d86fec12f2459a5796d76d936ef,
+    type: 2}
+  m_PrefabInternal: {fileID: 1510501923}
+--- !u!114 &1043009250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1043009249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bda45f0021794242905bd2916d6aa9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1136962484
 GameObject:
   m_ObjectHideFlags: 0
@@ -710,14 +726,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3b562037562d2d4ea02bdb33c572001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  melee:
-    name: 
-    damage: 0
-    swingSpeed: 0
   firearm:
-    name: 
-    damage: 0
-    automatic: 0
+    name: Rusty Gun
+    damage: 10
+    automatic: 1
 --- !u!1 &1339232001
 GameObject:
   m_ObjectHideFlags: 0

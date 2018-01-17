@@ -16,6 +16,4 @@ public class GunManager : MonoBehaviour
     {
         public int swingSpeed;
     }
-
-    public Melee melee;
 }
