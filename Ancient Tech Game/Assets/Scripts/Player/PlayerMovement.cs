@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField]
     private Rigidbody2D playerRb2d;
+    [SerializeField]
+    private SpriteRenderer playerSpriteRenderer;
 	
 	// Update is called once per frame
 	void Update ()
@@ -47,11 +49,11 @@ public class PlayerMovement : MonoBehaviour
         //Player Image rotation
         if (angle > 90 || angle < -90)
         {
-            gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+            playerSpriteRenderer.flipX = false;
         }
         else
         {
-            gameObject.transform.rotation = Quaternion.Euler(0, 200, 0);
+            playerSpriteRenderer.flipX = true;
         }
 
     }

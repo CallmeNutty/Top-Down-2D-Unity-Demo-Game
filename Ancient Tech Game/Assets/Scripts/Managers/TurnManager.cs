@@ -15,6 +15,8 @@ public class TurnManager : MonoBehaviour {
     private GameObject rushman;
     private GameObject createdMob;
 
+    [SerializeField]
+    private float difficulty;
     public int enemiesThisWave;
     private bool waveOver;
     private bool enemiesSpawned;
@@ -34,7 +36,7 @@ public class TurnManager : MonoBehaviour {
             counter += prepTime; //Reset the counter
 
             mobList.Clear();
-            enemiesThisWave = ScaleDifficulty(wave, 1.5f);
+            enemiesThisWave = ScaleDifficulty(wave, difficulty);
 
             //Adds random enemies to the Moblist
             for (int k = 0; k < enemiesThisWave; k++)

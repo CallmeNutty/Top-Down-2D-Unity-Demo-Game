@@ -50,5 +50,14 @@ public class Firing : MonoBehaviour
                 gunSound.Play();
             }
         }
+
+        if (angle > 90 || angle < -90)
+        {
+            gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+        else
+        {
+            gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
     }
 }
